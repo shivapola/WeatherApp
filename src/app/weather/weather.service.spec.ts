@@ -22,7 +22,7 @@ describe('WeatherService', () => {
         (weatherService: WeatherService, backend: HttpTestingController) => {
             weatherService.searchWeatherForCity('London').subscribe();
             backend.expectOne((req: HttpRequest<any>) => {
-                return req.url === 'http://www.mocky.io/v2/5cae53483400000d00ab6cdb'
+                return req.url === 'https://api.openweathermap.org/data/2.5/forecast'
                     && req.method === 'GET'
             });
         })));

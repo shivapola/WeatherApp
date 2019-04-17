@@ -12,9 +12,7 @@ import { NgForm } from '@angular/forms';
 export class SearchComponent {
   @ViewChild('f') searchForm: NgForm;
 
-  constructor(private store: Store<AppState>,
-    private route: ActivatedRoute) { }
-
+  constructor(private store: Store<AppState>) { }
 
   onsubmit = () => {
     const city = this.searchForm.value.city;

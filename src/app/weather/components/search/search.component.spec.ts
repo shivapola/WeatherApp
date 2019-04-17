@@ -7,6 +7,7 @@ import { SearchComponent } from './search.component';
 import Spy = jasmine.Spy;
 import { Store, StoreModule } from '@ngrx/store';
 import { weatherreducer } from '../../store/reducers/weather.reducer';
+import { FormsModule } from '@angular/forms';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -15,7 +16,7 @@ describe('SearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SearchComponent ],
-      imports: [StoreModule.forRoot({weather:weatherreducer})],
+      imports: [StoreModule.forRoot({weather:weatherreducer}),FormsModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();

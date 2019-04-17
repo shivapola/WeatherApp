@@ -9,11 +9,10 @@ import { AppState } from '../../store/app.state';
   templateUrl: './results.component.html'
 })
 export class ResultsComponent implements OnChanges {
-   @Input() weDataArray:WeatherData[];
-   weathers : Observable<WeatherData[]>;
+  @Input() weDataArray: WeatherData[];
+  weathers: Observable<WeatherData[]>;
   constructor(private store: Store<AppState>) {
-  this.weathers = store.select('weather');
-  console.log(this.weathers);
+    this.weathers = store.select('weather');
   }
   ngOnChanges() {
     // IMPLEMENT ANYTHING YOU BEKIEVE YOU MIGHT NEED HERE  

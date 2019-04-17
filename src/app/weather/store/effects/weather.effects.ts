@@ -1,13 +1,10 @@
 import { Injectable } from "@angular/core";
 import { Effect, ofType, Actions } from '@ngrx/effects';
-import { Store, select } from '@ngrx/store';
-import { switchMap, map, withLatestFrom, concatMapTo } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import * as WeatherActions from "../actions/weather.actions";
 import { WeatherData, Weather } from "../../../model/weather";
 import { WeatherService } from "../../weather.service";
-import { AppState } from "../app.state";
 import { of } from "rxjs/observable/of";
-import { ActivatedRoute } from "@angular/router";
 
 // TO BE IMPLEMENTED IF YOU DECIDE TO USE NG-RX @Effect()
 @Injectable()
@@ -29,6 +26,5 @@ export class WeatherEffects {
     constructor(
         private _weatherService: WeatherService,
         private _actions$: Actions,
-        private _store: Store<AppState>,
     ) { }
 }
