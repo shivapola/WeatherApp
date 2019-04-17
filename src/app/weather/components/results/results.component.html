@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">City</th>
+    <th scope="col">6 AM</th>
+    <th scope="col">12 PM</th>
+    <th scope="col">6 PM</th>
+    <th scope="col">12 AM</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of weathers | async">
+    <td scope="row">{{i.city}}</td>
+    <td scope="row">{{i.am6}} &deg;</td>
+    <td scope="row">{{i.pm12}} &deg;</td>
+    <td scope="row">{{i.pm18}} &deg;</td>
+    <td scope="row">{{i.am12}} &deg;</td>
+  </tr>
+  </tbody>
+</table>
